@@ -21,3 +21,9 @@ class Point:
 
     def __repr__(self):
         return '(' + self.x + ', ' + self.y + ')'
+
+    def __add__(self, other):
+        if type(other) == Point:
+            return Point(self.x + other.x, self.y + other.y)
+        else:
+            return Point(self.x + other, self.y + other)
