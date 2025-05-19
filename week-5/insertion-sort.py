@@ -12,5 +12,5 @@ def insertion_sort(v):
 
     return v
 
-unordered_list = [44 , 55 , 12 , 42 , 94 , 18 , 6 , 67]
+unordered_list = [44 , 55 , 12 , 42 , 94 , 18 , -10, -2, -12, 6 , 67]
 print(insertion_sort(unordered_list))
