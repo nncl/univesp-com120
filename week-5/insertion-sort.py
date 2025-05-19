@@ -4,7 +4,7 @@ def insertion_sort(v):
         current = v[i]
         previous = i - 1
 
-        while previous >= 0 and v[previous] > current:
+        while previous >= 0 and current < v[previous]:
             v[previous + 1] = v[previous]
             previous -= 1
 
