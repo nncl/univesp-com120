@@ -25,7 +25,8 @@ def quick_sort(array, start, end):
         # TD: Shouldn't we compare the items instead of the indexes? No, this statement is for checking if the pointers have
         #    crossed each other
         # TD: How does it already know it can switch? Because of the whiles above: when they're no long true,
-        #   we know elements are in the wrong side
+        #   we know elements are in the wrong side.
+        #   Quick sort relies on when that’s no longer true — that's when the value needs to be moved to the other side
         if i <= j:
             array[i], array[j] = array[j], array[i]
             i += 1
