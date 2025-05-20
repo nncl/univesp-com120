@@ -11,8 +11,8 @@ def merge_sort(v, start, end):
 
 def intercalates(v, start, middle, end):
     # Auxiliary arrays
-    l = v[start: middle + 1]
-    r = v[middle + 1:end + 1]
+    l = v[start: middle + 1] # Excludes middle
+    r = v[middle + 1:end + 1] # Includes middle and ending values
 
     # Sentinel values, may change
     l.append(999)
@@ -21,13 +21,16 @@ def intercalates(v, start, middle, end):
     print('left:', l)
     print('right:', r)
 
+    # Pointers
     i = 0
     j = 0
 
     for k in range(start, end + 1): # Need to include the latest item
+        # If left side is lower than right side, than get the left side
         if l[i] <= r[j]:
             v[k] = l[i]
             i += 1
+        # Otherwise the right side is the lower one
         else:
             v[k] = r[j]
             j += 1
